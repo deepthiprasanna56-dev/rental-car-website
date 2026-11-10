@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #070708;
+    color: #f3f4f6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Red Luxury Accents & Glows */
+.red-glow {
+  box-shadow: 0 0 24px rgba(220, 38, 38, 0.4);
+}
+
+.red-glow-lg {
+  box-shadow: 0 0 50px rgba(220, 38, 38, 0.3), 0 0 100px rgba(220, 38, 38, 0.15);
+}
+
+.luxury-card-dark {
+  background: #0f0f12;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-dark:hover {
+  border-color: rgba(220, 38, 38, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(220, 38, 38, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070708;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a1010;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
